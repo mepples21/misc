@@ -979,14 +979,14 @@ function startLog() {
 }
 
 # function to delay until the user has finished setup assistant.
-#waitForDesktop () {
-#  until ps aux | grep /System/Library/CoreServices/Dock.app/Contents/MacOS/Dock | grep -v grep &>/dev/null; do
-#    delay=$(( $RANDOM % 50 + 10 ))
-#    echo "$(date) |  + Dock not running, waiting [$delay] seconds"
-#    sleep $delay
-#  done
-#  echo "$(date) | Dock is here, lets carry on"
-#}
+waitForDesktop () {
+  until ps aux | grep /System/Library/CoreServices/Dock.app/Contents/MacOS/Dock | grep -v grep &>/dev/null; do
+    delay=$(( $RANDOM % 50 + 10 ))
+    echo "$(date) |  + Dock not running, waiting [$delay] seconds"
+    sleep $delay
+  done
+  echo "$(date) | Dock is here, lets carry on"
+}
 
 ###################################################################################
 ###################################################################################
@@ -1011,8 +1011,8 @@ checkForRosetta2
 # Test if we need to install or update
 updateCheck
 
-# Wait for Desktop
-waitForDesktop
+# Wait for Desktop - removed for installation during Setup Assistant
+#waitForDesktop
 
 # Download app
 downloadApp
