@@ -33,7 +33,7 @@
 
 # User Defined variables
 mauurl="https://go.microsoft.com/fwlink/?linkid=830196"                         # URL to fetch latest MAU
-weburl="https://go.microsoft.com/fwlink/?linkid=853070"                         # What is the Azure Blob Storage URL?
+weburl="https://github.com/mepples21/misc/raw/refs/heads/main/CompanyPortal_5.2504.1-Installer.pkg"                         # What is the Azure Blob Storage URL?
 appname="Company Portal"                                                        # The name of our App deployment script (also used for Octory monitor)
 app="Company Portal.app"                                                        # The actual name of our App once installed
 logandmetadir="/Library/Logs/Microsoft/IntuneScripts/installCompanyPortal"      # The location of our logs and last updated data
